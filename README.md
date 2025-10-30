@@ -105,7 +105,7 @@ Students
 
 **Viransh Thakore**  
  
-💼Asha M. Tarsadia Institue of Computer Science and Technology
+💼Asha M. Tarsadia Institute of Computer Science and Technology
 
 📧Enrollment no.: 202303103510415
 
