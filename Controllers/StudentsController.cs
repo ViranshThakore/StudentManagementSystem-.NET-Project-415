@@ -4,7 +4,6 @@ using StudentManagementSystem.Models;
 using StudentManagementSystem.Data;
 namespace StudentManagementSystem.Controllers;
 
-
 public class StudentsController : Controller
 {
     private readonly AppDbContext _db;
