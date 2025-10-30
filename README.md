@@ -99,14 +99,6 @@ Students
 
 **All your data is stored locally in student.db (SQLite).**
 
----
 
-## 👨‍💻 Author
 
-**Viransh Thakore**  
- 
-💼Asha M. Tarsadia Institute of Computer Science and Technology
 
-📧Enrollment no.: 202303103510415
-
-🔗 **GitHub:** [@ViranshThakore](https://github.com/ViranshThakore)
