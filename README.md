@@ -41,8 +41,8 @@ Follow these steps to run the project locally:
 
 ### **1. Clone the Repository**
 ```bash
-git clone https://github.com/ViranshThakore/StudentManagementSystem-.NET-Project-415.git
-cd StudentManagementSystem-.NET-Project-415
+git clone https://github.com/ViranshThakore/dotnet_project_415.git
+cd dotnet_project_415
 ```
 
 **2. Restore Dependencies**
