@@ -1,0 +1,59 @@
+@model IEnumerable<Student>
+@{
+    ViewData["Title"] = "Students List";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">🎓 Student Management System</h2>
+
+    <form method="get" class="row mb-3">
+        <div class="col-md-4">
+            <input type="text" name="search" class="form-control" placeholder="Search by name or roll no..." />
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+        <div class="col-md-6 text-end">
+            <a asp-action="Create" class="btn btn-success">+ Add New Student</a>
+        </div>
+    </form>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Date of Birth</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var s in Model)
+                {
+                    <tr>
+                        <td>@s.RollNo</td>
+                        <td>@s.FirstName @s.LastName</td>
+                        <td>@s.Email</td>
+                        <td>@s.Phone</td>
+                        <td>@s.DateOfBirth.ToString("dd MMM yyyy")</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@s.Id" class="btn btn-sm btn-info">View</a>
+                            <a asp-action="Edit" asp-route-id="@s.Id" class="btn btn-sm btn-warning">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@s.Id" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="6" class="text-center text-muted">No students found.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

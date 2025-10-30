@@ -1,0 +1,35 @@
+@model Student
+@{
+    ViewData["Title"] = "Student Details";
+}
+
+<div class="container mt-4">
+    <h3 class="mb-4 text-center text-info">Student Details</h3>
+
+    <div class="card shadow-sm p-4">
+        <dl class="row">
+            <dt class="col-sm-3">Roll Number</dt>
+            <dd class="col-sm-9">@Model.RollNo</dd>
+
+            <dt class="col-sm-3">Name</dt>
+            <dd class="col-sm-9">@Model.FirstName @Model.LastName</dd>
+
+            <dt class="col-sm-3">Email</dt>
+            <dd class="col-sm-9">@Model.Email</dd>
+
+            <dt class="col-sm-3">Phone</dt>
+            <dd class="col-sm-9">@Model.Phone</dd>
+
+            <dt class="col-sm-3">Date of Birth</dt>
+            <dd class="col-sm-9">@Model.DateOfBirth.ToString("dd MMM yyyy")</dd>
+
+            <dt class="col-sm-3">Created On</dt>
+            <dd class="col-sm-9">@Model.CreatedAt.ToString("dd MMM yyyy")</dd>
+        </dl>
+
+        <div class="text-end">
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+</div>
